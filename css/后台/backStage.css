@@ -1,0 +1,148 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#Top-Container{
+    width: 100%;
+    height: 17%;
+    background-color: rgb(68, 70, 85);
+}
+.Top-Container-Title{
+    display: inline-block;
+    width: 165px;
+    height: 17%;
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    margin-left: 30px;
+}
+.Top-Container-Title h1{
+   margin-top:32px;
+   margin-bottom: 3px;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-weight: 500;
+}
+.Top-Container-Title p
+{
+    font-size: 12px;
+    display: flex;
+    justify-content: space-around;
+    letter-spacing: 8px;
+    color: #ffffff;
+} 
+.Top-ContainerInput{
+    float: right;
+    width: 400px;
+    height: 100%;
+    margin-right: 100px;
+
+}
+.Top-ContainerInput input{
+    width: 350px;
+    height: 35px;
+    padding-left: 50px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid rgb(189, 189, 189);
+    display: flex;
+   margin-top: 38px;  
+    background: url(../首页/搜索\ \(1\).png) no-repeat 18px 8px #ffffff;
+   background-size: 20px;
+ 
+}
+.Top-ContainerInput input::-webkit-input-placeholder{
+    color: #999999;
+}
+
+.Top-ContainerInput input:focus{
+    border-color: #d33333;
+
+}
+.Top-ContainerInput button{
+    width: 80px;
+    height: 38px;
+    position: absolute;
+    top: -1px;
+    right:90px;
+    background-color: #d33333;
+    color: white;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border: none;
+    margin-top: 38px;
+    cursor: pointer;
+}
+.Top-ContainerInput button:focus{
+    background-color: #d44444;
+    outline: none;
+}
+.Top-ContainerInput button:hover{
+    background-color: #d44444;
+}
+#Left-container{
+    display: inline-block;
+    width: 15%;
+    height: 82%;
+    background-color: rgb(238, 238, 238);
+    overflow: hidden;
+}
+#Left-container::-webkit-scrollbar{
+    display: none;
+}
+.user{
+    width: 80%;
+    height: 90px;
+    background-color: red;
+    margin: 0px auto;
+    background: url(./头像.png) no-repeat 20px 25px rgb(238, 238, 238);
+    background-size: 40px;
+    border-bottom: 1px solid rgb(216, 216, 216);
+}
+.user-title{
+    width: 60%;
+    height: auto;
+    float: right;
+    margin-top: 20px;
+    color: #777777;
+}
+.user-title a{
+    display: inline-block;
+    margin: 5px 0px;
+    text-decoration: none;
+    color: #777777;
+}
+.label-1{
+    width: 100%;
+    height: 60px;
+    background-color: red;
+    cursor: pointer;
+}
+.label-1:focus{
+    background-color: #d33333;
+    color:white;
+}
+.label-1:nth-child(1){
+    margin-top: 10px;
+}
+.label-name{
+    font-size: 20px;
+}
+.label-container{
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+
+#Right-container{
+    display: inline-block;
+    width: 84%;
+    height: 82%;
+    background-color: white;
+}

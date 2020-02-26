@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="./static/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <script src="./static/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="./css/收费服务/quantaofuwu.css">
+    <link rel="stylesheet" href="./css/留学指南/styudyGuide.css">
+    <link rel="stylesheet" href="./css/收费服务/mianfeifuwu.css">
+    <link rel="stylesheet" href="./css/留学资讯/studyInformation.css">
+    <link rel="stylesheet" href="./css/首页/homePage.css">
+    <title>Document</title>
+</head>
+
+<body onhashchange="gethash()">
+    <div id="title_white">
+        <div class="subscription">
+            <div class="subscription-container">
+                <span> 400-888-9999</span>
+                <span> 搜狐号</span>
+                <span> 企业微博</span>
+                <span> 微信公众号</span>
+                <span> 今日头条号</span>
+                <div class="subscription-load-register">
+                    <a class="subscription-register">注册</a>
+                    <em></em>
+                    <a class="subscription-load">登录</a>
+                </div>
+            </div>
+        </div>
+        <div class="title_serch">
+            <div class="title_serch_container">
+                <div class="logo">
+                    <h2>常春藤留学</h2>
+                    <p>出国留学不花冤枉钱</p>
+                </div>
+                <div class="overall-input">
+                    <select>
+                        <option value="OnlineApplication">网申</option>
+                        <option value="RealityApplication">现申</option>
+                    </select>
+                    <input type="text" placeholder="请输入相关的搜索关键词">
+                    <button>搜索</button>
+                </div>
+                <div class="ORcode">
+
+                </div>
+            </div>
+        </div>
+        <div class="title_list">
+            <ul class="list">
+                <li class="list_page active" ceshi="shouye"><a href="javascript:void(0)">首页</a></li>
+                <li class="list_page" ceshi="free_service"><a href="javascript:void(0)">免费服务</a></li>
+                <li class="list_page" ceshi="charge_service"><a href="javascript:void(0)">收费服务</a></li>
+                <li class="list_page" ceshi="cooperative_colleges"><a href="javascript:void(0)">合作院校</a></li>
+                <li class="list_page" ceshi="mini_study"><a href="javascript:void(0)">微留学</a></li>
+                <li class="list_page" ceshi="study_guide"><a href="javascript:void(0)">留学指南</a></li>
+                <li class="list_page" ceshi="study_information"><a href="javascript:void(0)">留学资讯</a></li>
+                <li class="list_page" ceshi="free_assess"><a href="javascript:void(0)">免费评估</a></li>
+                <li class="list_page" ceshi="study_answers"><a href="javascript:void(0)">留学问答</a></li>
+                <li class="list_page" ceshi="service_process"><a href="javascript:void(0)">服务进程</a></li>
+                <li class="list_page" ceshi="about_our"><a href="javascript:void(0)">关于我们</a></li>
+                <li class="list_page" ceshi="coo_others"><a href="javascript:void(0)">诚招合作</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="container">
+
+        <div class="bottom_container" id="shouye">
+            这是首页
+        </div>
+        <div class="bottom_container" id="free_service">
+            <img src="./img/免费服务.png" alt="您的图片丢失了" title="本网与多所海外院校合作，协助代表学校在中国市场提供招生服务，合作院校栏目下的学校都是本站的合作方，所有申请本院合作院校的同学，都可以免费获取留学服务，从入学申请到签证，从接机安排到住宿服务。">
+            <div class="free_service_container">
+                <div class="free_service_explain">
+                    <canvas class="canvas"></canvas>
+                </div>
+                <div class="free_service_commonQuestion">
+
+                </div>
+                <div class="free_service_cooperationSchool">
+
+                </div>
+            </div>
+        </div>
+        <div class="bottom_container" id="charge_service">
+            <img src="./img/收费服务.png" alt="您的图片丢失了" title="收费服务是针对那些有特定需求的学生设计的，每一种服务都是按照用户的需求设计的，当然，你也可以额外提出你的要求，在我们能力范围内，我们会竭力满足你的需要。
+            部分服务无法达到你的需求，我们是不收费的，如果已经收了费用，我们会退还，具体情况，还请看各项服务而具体说明。"
+                class="img_shoufei" style="cursor:pointer">
+            <div class="charge_service_container">
+                <div class="left_charge_service">
+                    <h3>收费服务</h3>
+                    <ul class="shoufeifuwu">
+                        <li class="shoufeifuwu_list active" tianjia="quantao">
+                            <span class="glyphicon glyphicon-heart"></span>
+                            <span>全套服务</span>
+                        </li>
+                        <li class="shoufeifuwu_list" tianjia="shenqing">
+                            <span class="glyphicon glyphicon-file"></span>
+                            <span>申请服务</span>
+                        </li>
+                        <li class="shoufeifuwu_list" tianjia="qianzheng">
+                            <span class="glyphicon glyphicon-list-alt"></span>
+                            <span>签证服务</span>
+                        </li>
+                        <li class="shoufeifuwu_list" tianjia="wenshu">
+                            <span class="glyphicon glyphicon-book"></span>
+                            <span>文书服务</span>
+                        </li>
+                        <li class="shoufeifuwu_list" tianjia="jieji">
+                            <span class="glyphicon glyphicon-plane"></span>
+                            <span>接机服务</span>
+                        </li>
+                        <li class="shoufeifuwu_list" tianjia="jianhu">
+                            <span class="glyphicon glyphicon-eye-open"></span>
+                            <span>监护服务</span>
+                        </li>
+                        <li class="shoufeifuwu_list" tianjia="mianshi">
+                            <span class="glyphicon glyphicon-globe"></span>
+                            <span>面试服务</span>
+                        </li>
+                        <li class="shoufeifuwu_list" tianjia="zhusu">
+                            <span class="glyphicon glyphicon-oil"></span>
+                            <span>住宿服务</span>
+                        </li>
+                        <li class="shoufeifuwu_list" tianjia="zaoqiniao">
+                            <span class="glyphicon glyphicon-thumbs-up"></span>
+                            <span>早起鸟服务</span>
+                        </li>
+                    </ul>
+
+
+                </div>
+                <div class="right_charge_service">
+                    <div class="shoufeifuwu_container active" id="quantao">
+                        <div class="right_charge_service_title">
+                            <span class="glyphicon glyphicon-play"></span>
+                            <h4>全套服务</h4>
+                        </div>
+                        <div class="right_charge_service_describe">
+                            <p>这个服务是指留学规划、申请学校、签证服务、接机服务、住宿服务、监护服务。保险服务、机票服务等全部留学服务，都由我们负责，这个服务通常也是为结果负责的，也就是拿不到通知书和签证，我们是不收费的。</p>
+                        </div>
+                        <div class="right_charge_service_content">
+                            <form action="">
+                                <div class="from_title">
+                                    服务在线报名
+                                </div>
+                                <div class="from_content">
+                                    <ul>
+                                        <li>
+                                            <p style="display: inline-block;"><span style="color:red">*</span> 您的姓名 ：</p>
+                                            <input type="text" placeholder="请输入您的姓名">
+                                        </li>
+                                        <li>
+                                            <p style="display: inline-block;"><span style="color:red">*</span> 联系方式 ：</p>
+                                            <input type="text" placeholder="请输入您的手机号">
+                                        </li>
+                                        <li class="SelectSchool">
+                                            <p style="display: inline-block;"><span style="color:red">*</span> 目标学校 ：</p>
+                                            <div class="mubiaoxuexiao-select-container mubiaoxuexiao-list-1">
+                                                <select class="charge_select">
+                                                    <option value="1" class="selectCountry" disabled selected>请选择国家</option>
+                                                    <option value="china">中国</option>
+                                                    <option value="us">美国</option>
+                                                    <option value="uk">英国</option>
+                                                    <option value="fr">法国</option>
+                                                </select>
+                                                <span class="select-down">∨</span>
+                                                <input type="text" placeholder="请填写学校名" class="targetSchool">
+                                                <span class="glyphicon glyphicon-minus-sign minus-1" onclick="minusSelectSchool(1)"></span>
+                                                <span class="glyphicon glyphicon-plus-sign  plus-1" onclick="addSelectSchool()"></span>
+
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p style="display: inline-block;"><span style="color:red">*</span> 目标学历 ：</p>
+                                            <div class="mubiaoxuexiao-select-container mubiaoxuexiao-list-1">
+                                                <select class="charge_select charge-select-1">
+                                                    <option value="1" class="selectCountry" disabled selected>请选择您的目标学历</option>
+                                                    <option value="boshi">博士</option>
+                                                    <option value="shuoshi">硕士</option>
+                                                    <option value="benke">本科</option>
+                                                    <option value="zhuanke">专科</option>
+                                                </select>
+                                                <span class="select-down select-down1">∨</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p style="display: inline-block;"><span style="color:red">*</span> 目标专业 ：</p>
+                                            <input type="text" placeholder="请输入您的目标专业">
+                                        </li>
+                                        <li>
+                                            <p style="display: inline-block;"><span style="color:red">*</span> 目标专业 ：</p>
+                                            <input type="text" placeholder="请输入您的目标专业">
+                                        </li>
+                                        <li>
+                                            <p style="display: inline-block;"><span style="color:red">*</span> 文件上传 ：</p>
+                                            <div class="full-table-1-container">
+                                                <table class="full-table-1">
+                                                    <tr class="full-table-1-title">
+                                                        <td>序号</td>
+                                                        <td>资料类型</td>
+                                                        <td>资料名称</td>
+                                                        <td>本地文件名</td>
+                                                        <td>操作</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="xuhao">1</td>
+                                                        <td>学历证明</td>
+                                                        <td>
+                                                            <div class="inputs">
+                                                                <input type="text" placeholder="*必填">
+                                                            </div>
+                                                        </td>
+                                                        <td class="Local-file-name">本地文件名</td>
+                                                        <td>
+                                                            <span class="tianjia">添加</span>
+                                                            <span class="shanchu">删除</span>
+                                                            <input type="file" class="tianjiaziliao">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>成绩单</td>
+                                                        <td>
+                                                            <div class="inputs">
+                                                                <input type="text" placeholder="*必填">
+                                                            </div>
+                                                        </td>
+                                                        <td class="Local-file-name">本地文件名</td>
+                                                        <td>
+                                                            <span class="tianjia">添加</span>
+                                                            <span class="shanchu">删除</span>
+                                                            <input type="file" class="tianjiaziliao">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="xuhao">3</td>
+                                                        <td>外语成绩</td>
+                                                        <td>
+                                                            <div class="inputs">
+                                                                <input type="text">
+                                                            </div>
+                                                        </td>
+                                                        <td class="Local-file-name">本地文件名</td>
+                                                        <td>
+                                                            <span class="tianjia">添加</span>
+                                                            <span class="shanchu">删除</span>
+                                                            <input type="file" class="tianjiaziliao">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>标准化考试成绩</td>
+                                                        <td>
+                                                            <div class="inputs">
+                                                                <input type="text">
+                                                            </div>
+                                                        </td>
+                                                        <td class="Local-file-name">本地文件名</td>
+                                                        <td>
+                                                            <span class="tianjia">添加</span>
+                                                            <span class="shanchu">删除</span>
+                                                            <input type="file" class="tianjiaziliao">
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="full-table-1-shangchuan">
+                                                        <td colspan="5" rowspan="2">
+                                                            <span style="font-weight: 500">新增资料</span>
+                                                            <select>
+                                                                <option value="1" disabled selected>选择资料类型</option>
+                                                                <option value="text">文字资料</option>
+                                                                <option value="photo">图片资料</option>
+                                                                <option value="video">影音资料</option>
+                                                            </select>
+                                                            <input type="file" class="tianjiaziliao bendiliulan-file-1">
+                                                            <input type="text" class="bendiliulan-input-1" style="cursor:pointer;width: 230px;"
+                                                                placeholder="浏览本地文件" readonly>
+                                                            <button type="button" class="bendiliulan-button-1" style="width:100px;height: 34px;color: white;background-color: #d33333;position: relative;top: -1px;left: -10px;border: none;border-top-right-radius: 5px;border-bottom-right-radius: 5px">本地上传</button>
+
+                                                        </td>
+
+                                                    </tr>
+
+                                                </table>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p style="margin-left:75px;color:red;">注：请上传你目前所有的资料类型文档，每种可上传多个，请勿重复上传!</p>
+                                        </li>
+                                        <li>
+                                            <p style="display: inline-block;"><span style="color:red">*</span> 文件上传 ：</p>
+                                            <div class="full-table-1-container">
+                                                <table class="full-table-1">
+                                                    <tr class="full-table-1-title">
+                                                        <td>序号</td>
+                                                        <td>推荐人情况</td>
+                                                        <td>推荐信名称</td>
+                                                        <td>本地文件名</td>
+                                                        <td>操作</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="xuhao">1</td>
+                                                        <td>学历证明</td>
+                                                        <td>
+                                                            <div class="inputs">
+                                                                <input type="text" placeholder="*必填">
+                                                            </div>
+                                                        </td>
+                                                        <td class="Local-file-name">本地文件名</td>
+                                                        <td>
+                                                            <span class="tianjia">添加</span>
+                                                            <span class="shanchu">删除</span>
+                                                            <input type="file" class="tianjiaziliao">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>成绩单</td>
+                                                        <td>
+                                                            <div class="inputs">
+                                                                <input type="text" placeholder="*必填">
+                                                            </div>
+                                                        </td>
+                                                        <td class="Local-file-name">本地文件名</td>
+                                                        <td>
+                                                            <span class="tianjia">添加</span>
+                                                            <span class="shanchu">删除</span>
+                                                            <input type="file" class="tianjiaziliao">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="xuhao">3</td>
+                                                        <td>外语成绩</td>
+                                                        <td>
+                                                            <div class="inputs">
+                                                                <input type="text">
+                                                            </div>
+                                                        </td>
+                                                        <td class="Local-file-name">本地文件名</td>
+                                                        <td>
+                                                            <span class="tianjia">添加</span>
+                                                            <span class="shanchu">删除</span>
+                                                            <input type="file" class="tianjiaziliao">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>标准化考试成绩</td>
+                                                        <td>
+                                                            <div class="inputs">
+                                                                <input type="text">
+                                                            </div>
+                                                        </td>
+                                                        <td class="Local-file-name">本地文件名</td>
+                                                        <td>
+                                                            <span class="tianjia">添加</span>
+                                                            <span class="shanchu">删除</span>
+                                                            <input type="file" class="tianjiaziliao">
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="full-table-1-shangchuan" style="position:relative">
+                                                        <td colspan="5" rowspan="2">
+                                                            <span style="font-weight: 500">新增资料</span>
+                                                            <select>
+                                                                <option value="1" disabled selected>选择资料类型</option>
+                                                                <option value="text">文字资料</option>
+                                                                <option value="photo">图片资料</option>
+                                                                <option value="video">影音资料</option>
+                                                            </select>
+                                                            <input type="file" class="tianjiaziliao bendiliulan-file-2">
+                                                            <input type="text" class="bendiliulan-input-2" style="cursor:pointer;width: 230px;"
+                                                                placeholder="浏览本地文件" readonly>
+                                                            <button type="button" class="bendiliulan-button-2" style="width:100px;height: 34px;color: white;background-color: #d33333;position: relative;top: -1px;left: -10px;border: none;border-top-right-radius: 5px;border-bottom-right-radius: 5px">本地上传</button>
+
+                                                        </td>
+
+                                                    </tr>
+
+                                                </table>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p style="display: inline-block;"><span style="color:red">*</span> 留言备注 ：</p>
+                                            <input type="text" class="LeaveMessage" placeholder="如果您有其他疑问，可以在这里留言备注!">
+                                        </li>
+                                        <li class="tijiaoshenqing">
+                                            <button onclick="fullServiceSubmit()">提交申请</button>
+                                            <a href="">搞不懂怎么填写上面的表单，直接问问客服?</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    <div class="shoufeifuwu_container" id="shenqing">
+                        <div class="right_charge_service_title">
+                            <span class="glyphicon glyphicon-play"></span>
+                            <h4>申请服务</h4>
+                        </div>
+                        <div class="right_charge_service_describe">
+                            <p>申请服务通常是指入学申请服务，如果我们不能帮你申请到满意的学校是不收费的，这类的服务费用较贵，当然，不能为你申请到满意的学校，我们是不收取费用。这是一项预付费业务，不成功，会退还费用，请在线提交你的要申请的学校。</p>
+                        </div>
+                        <div class="right_charge_service_content">
+                            <form action="">
+                                <div class="from_title">
+                                    服务在线报名
+                                </div>
+                                <div class="from_content">
+                                    <ul>
+                                        <li>
+                                            <p style="display: inline-block;"><span style="color:red">*</span> 您的姓名 ：</p>
+                                            <input type="text" placeholder="请输入您的姓名">
+                                        </li>
+                                        <li>
+                                            <p style="display: inline-block;"><span style="color:red">*</span> 联系方式 ：</p>
+                                            <input type="text" placeholder="请输入您的手机号">
+                                        </li>
+                                        <li class="SelectSchool">
+                                            <p style="display: inline-block;"><span style="color:red">*</span> 目标学校 ：</p>
+                                            <div class="mubiaoxuexiao-select-container mubiaoxuexiao-list-1">
+                                                <select class="charge_select">
+                                                    <option value="1" class="selectCountry" disabled selected>请选择国家</option>
+                                                    <option value="china">中国</option>
+                                                    <option value="us">美国</option>
+                                                    <option value="uk">英国</option>
+                                                    <option value="fr">法国</option>
+                                                </select>
+                                                <span class="select-down">∨</span>
+                                                <input type="text" placeholder="请填写学校名" class="targetSchool">
+                                                <span class="glyphicon glyphicon-minus-sign minus-1" onclick="minusSelectSchool(1)"></span>
+                                                <span class="glyphicon glyphicon-plus-sign  plus-1" onclick="addSelectSchool()"></span>
+
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p style="display: inline-block;"><span style="color:red">*</span> 目标学历 ：</p>
+                                            <div class="mubiaoxuexiao-select-container mubiaoxuexiao-list-1">
+                                                <select class="charge_select charge-select-1">
+                                                    <option value="1" class="selectCountry" disabled selected>请选择您的目标学历</option>
+                                                    <option value="boshi">博士</option>
+                                                    <option value="shuoshi">硕士</option>
+                                                    <option value="benke">本科</option>
+                                                    <option value="zhuanke">专科</option>
+                                                </select>
+                                                <span class="select-down select-down1">∨</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p style="display: inline-block;"><span style="color:red">*</span> 目标专业 ：</p>
+                                            <input type="text" placeholder="请输入您的目标专业">
+                                        </li>
+                                        <li>
+                                            <p style="display: inline-block;"><span style="color:red">*</span> 目标专业 ：</p>
+                                            <input type="text" placeholder="请输入您的目标专业">
+                                        </li>
+                                        <li>
+                                            <p style="display: inline-block;"><span style="color:red">*</span> 文件上传 ：</p>
+                                            <div class="full-table-1-container">
+                                                <table class="full-table-1">
+                                                    <tr class="full-table-1-title">
+                                                        <td>序号</td>
+                                                        <td>资料类型</td>
+                                                        <td>资料名称</td>
+                                                        <td>本地文件名</td>
+                                                        <td>操作</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="xuhao">1</td>
+                                                        <td>学历证明</td>
+                                                        <td>
+                                                            <div class="inputs">
+                                                                <input type="text" placeholder="*必填">
+                                                            </div>
+                                                        </td>
+                                                        <td class="Local-file-name">本地文件名</td>
+                                                        <td>
+                                                            <span class="tianjia">添加</span>
+                                                            <span class="shanchu">删除</span>
+                                                            <input type="file" class="tianjiaziliao">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>成绩单</td>
+                                                        <td>
+                                                            <div class="inputs">
+                                                                <input type="text" placeholder="*必填">
+                                                            </div>
+                                                        </td>
+                                                        <td class="Local-file-name">本地文件名</td>
+                                                        <td>
+                                                            <span class="tianjia">添加</span>
+                                                            <span class="shanchu">删除</span>
+                                                            <input type="file" class="tianjiaziliao">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="xuhao">3</td>
+                                                        <td>外语成绩</td>
+                                                        <td>
+                                                            <div class="inputs">
+                                                                <input type="text">
+                                                            </div>
+                                                        </td>
+                                                        <td class="Local-file-name">本地文件名</td>
+                                                        <td>
+                                                            <span class="tianjia">添加</span>
+                                                            <span class="shanchu">删除</span>
+                                                            <input type="file" class="tianjiaziliao">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>标准化考试成绩</td>
+                                                        <td>
+                                                            <div class="inputs">
+                                                                <input type="text">
+                                                            </div>
+                                                        </td>
+                                                        <td class="Local-file-name">本地文件名</td>
+                                                        <td>
+                                                            <span class="tianjia">添加</span>
+                                                            <span class="shanchu">删除</span>
+                                                            <input type="file" class="tianjiaziliao">
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="full-table-1-shangchuan">
+                                                        <td colspan="5" rowspan="2">
+                                                            <span style="font-weight: 500">新增资料</span>
+                                                            <select>
+                                                                <option value="1" disabled selected>选择资料类型</option>
+                                                                <option value="xuelizhengming">学历证明</option>
+                                                                <option value="chengjidan">成绩单</option>
+                                                                <option value="waiyuchengji">外语成绩</option>
+                                                                <option value="kaoshichengji">标准化考试成绩</option>
+                                                            </select>
+                                                            <input type="file" class="tianjiaziliao bendiliulan-file-1">
+                                                            <input type="text" class="bendiliulan-input-1" style="cursor:pointer;width: 230px;"
+                                                                placeholder="浏览本地文件" readonly>
+                                                            <button type="button" class="bendiliulan-button-1" style="width:100px;height: 34px;color: white;background-color: #d33333;position: relative;top: -1px;left: -10px;border: none;border-top-right-radius: 5px;border-bottom-right-radius: 5px">本地上传</button>
+
+                                                        </td>
+
+                                                    </tr>
+
+                                                </table>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p style="margin-left:75px;color:red;">注：请上传你目前所有的资料类型文档，每种可上传多个，请勿重复上传!</p>
+                                        </li>
+                                        <li>
+                                            <p style="display: inline-block;"><span style="color:red">*</span> 文件上传 ：</p>
+                                            <div class="full-table-1-container">
+                                                <table class="full-table-1">
+                                                    <tr class="full-table-1-title">
+                                                        <td>序号</td>
+                                                        <td>推荐人情况</td>
+                                                        <td>推荐信名称</td>
+                                                        <td>本地文件名</td>
+                                                        <td>操作</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="xuhao">1</td>
+                                                        <td>学历证明</td>
+                                                        <td>
+                                                            <div class="inputs">
+                                                                <input type="text" placeholder="*必填">
+                                                            </div>
+                                                        </td>
+                                                        <td class="Local-file-name">本地文件名</td>
+                                                        <td>
+                                                            <span class="tianjia">添加</span>
+                                                            <span class="shanchu">删除</span>
+                                                            <input type="file" class="tianjiaziliao">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>成绩单</td>
+                                                        <td>
+                                                            <div class="inputs">
+                                                                <input type="text" placeholder="*必填">
+                                                            </div>
+                                                        </td>
+                                                        <td class="Local-file-name">本地文件名</td>
+                                                        <td>
+                                                            <span class="tianjia">添加</span>
+                                                            <span class="shanchu">删除</span>
+                                                            <input type="file" class="tianjiaziliao">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="xuhao">3</td>
+                                                        <td>外语成绩</td>
+                                                        <td>
+                                                            <div class="inputs">
+                                                                <input type="text">
+                                                            </div>
+                                                        </td>
+                                                        <td class="Local-file-name">本地文件名</td>
+                                                        <td>
+                                                            <span class="tianjia">添加</span>
+                                                            <span class="shanchu">删除</span>
+                                                            <input type="file" class="tianjiaziliao">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>标准化考试成绩</td>
+                                                        <td>
+                                                            <div class="inputs">
+                                                                <input type="text">
+                                                            </div>
+                                                        </td>
+                                                        <td class="Local-file-name">本地文件名</td>
+                                                        <td>
+                                                            <span class="tianjia">添加</span>
+                                                            <span class="shanchu">删除</span>
+                                                            <input type="file" class="tianjiaziliao">
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="full-table-1-shangchuan" style="position:relative">
+                                                        <td colspan="5" rowspan="2">
+                                                            <span style="font-weight: 500">新增资料</span>
+                                                            <select>
+                                                                <option value="1" disabled selected>选择资料类型</option>
+                                                                <option value="xuelizhengming">学历证明</option>
+                                                                <option value="chengjidan">成绩单</option>
+                                                                <option value="waiyuchengji">外语成绩</option>
+                                                                <option value="kaoshichengji">标准化考试成绩</option>
+                                                            </select>
+                                                            <input type="file" class="tianjiaziliao bendiliulan-file-2">
+                                                            <input type="text" class="bendiliulan-input-2" style="cursor:pointer;width: 230px;"
+                                                                placeholder="浏览本地文件" readonly>
+                                                            <button type="button" class="bendiliulan-button-2" style="width:100px;height: 34px;color: white;background-color: #d33333;position: relative;top: -1px;left: -10px;border: none;border-top-right-radius: 5px;border-bottom-right-radius: 5px">本地上传</button>
+
+                                                        </td>
+
+                                                    </tr>
+
+                                                </table>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p style="display: inline-block;"><span style="color:red">*</span> 留言备注 ：</p>
+                                            <input type="text" class="LeaveMessage" placeholder="如果您有其他疑问，可以在这里留言备注!">
+                                        </li>
+                                        <li class="tijiaoshenqing">
+                                            <button onclick="fullServiceSubmit()">提交申请</button>
+                                            <a href="">搞不懂怎么填写上面的表单，直接问问客服?</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    <div class="shoufeifuwu_container" id="qianzheng">
+                        <div class="right_charge_service_title">
+                            <span class="glyphicon glyphicon-play"></span>
+                            <h4>签证服务</h4>
+                        </div>
+                        <div class="right_charge_service_describe">
+                            <p>这个服务是指留学规划、申请学校、签证服务、接机服务、住宿服务、监护服务。保险服务、机票服务等全部留学服务，都由我们负责，这个服务通常也是为结果负责的，也就是拿不到通知书和签证，我们是不收费的。</p>
+                        </div>
+                    </div>
+                    <div class="shoufeifuwu_container" id="wenshu">
+                        <div class="right_charge_service_title">
+                            <span class="glyphicon glyphicon-play"></span>
+                            <h4>文书服务</h4>
+                        </div>
+                        <div class="right_charge_service_describe">
+                            <p>这个服务是指留学规划、申请学校、签证服务、接机服务、住宿服务、监护服务。保险服务、机票服务等全部留学服务，都由我们负责，这个服务通常也是为结果负责的，也就是拿不到通知书和签证，我们是不收费的。</p>
+                        </div>
+                    </div>
+                    <div class="shoufeifuwu_container" id="jieji">
+                        <div class="right_charge_service_title">
+                            <span class="glyphicon glyphicon-play"></span>
+                            <h4>接机</h4>
+                        </div>
+                        <div class="right_charge_service_describe">
+                            <p>这个服务是指留学规划、申请学校、签证服务、接机服务、住宿服务、监护服务。保险服务、机票服务等全部留学服务，都由我们负责，这个服务通常也是为结果负责的，也就是拿不到通知书和签证，我们是不收费的。</p>
+                        </div>
+                    </div>
+                    <div class="shoufeifuwu_container" id="mianshi">
+                        <div class="right_charge_service_title">
+                            <span class="glyphicon glyphicon-play"></span>
+                            <h4>面试服务</h4>
+                        </div>
+                        <div class="right_charge_service_describe">
+                            <p>这个服务是指留学规划、申请学校、签证服务、接机服务、住宿服务、监护服务。保险服务、机票服务等全部留学服务，都由我们负责，这个服务通常也是为结果负责的，也就是拿不到通知书和签证，我们是不收费的。</p>
+                        </div>
+                    </div>
+                    <div class="shoufeifuwu_container" id="zhusu">
+                        <div class="right_charge_service_title">
+                            <span class="glyphicon glyphicon-play"></span>
+                            <h4>住宿服务</h4>
+                        </div>
+                        <div class="right_charge_service_describe">
+                            <p>这个服务是指留学规划、申请学校、签证服务、接机服务、住宿服务、监护服务。保险服务、机票服务等全部留学服务，都由我们负责，这个服务通常也是为结果负责的，也就是拿不到通知书和签证，我们是不收费的。</p>
+                        </div>
+                    </div>
+                    <div class="shoufeifuwu_container" id="zaoqiniao">
+                        <div class="right_charge_service_title">
+                            <span class="glyphicon glyphicon-play"></span>
+                            <h4>早起鸟服务</h4>
+                        </div>
+                        <div class="right_charge_service_describe">
+                            <p>这个服务是指留学规划、申请学校、签证服务、接机服务、住宿服务、监护服务。保险服务、机票服务等全部留学服务，都由我们负责，这个服务通常也是为结果负责的，也就是拿不到通知书和签证，我们是不收费的。</p>
+                        </div>
+                    </div>
+                    <div class="shoufeifuwu_container" id="jianhu">
+                        <div class="right_charge_service_title">
+                            <span class="glyphicon glyphicon-play"></span>
+                            <h4>监护服务</h4>
+                        </div>
+                        <div class="right_charge_service_describe">
+                            <p>这个服务是指留学规划、申请学校、签证服务、接机服务、住宿服务、监护服务。保险服务、机票服务等全部留学服务，都由我们负责，这个服务通常也是为结果负责的，也就是拿不到通知书和签证，我们是不收费的。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom_container" id="cooperative_colleges">
+            这是合作院校
+        </div>
+        <div class="bottom_container" id="mini_study">
+            这是微留学
+        </div>
+        <div class="bottom_container active" id="study_guide">
+            <div class="study_guide_article_list">
+            <div class="step">
+                <span class="glyphicon glyphicon-map-marker"></span>
+                <span>首页<i class="zhuanye">&gt</i>留学指南</span>
+            </div>
+            <div class="study_guide_container">
+                <div class="study_guide_container_title">
+                    <span class="title">留学指南</span>
+                    <span class="study_guide_direction active" xuanze="school">
+                        <em></em>
+                        选校</span>
+                    <span class="study_guide_direction" xuanze="subject">
+                        <em></em>专业</span>
+                    <span class="study_guide_direction" xuanze="apply">
+                        <em></em>申请</span>
+                    <span class="study_guide_direction" xuanze="project">
+                        <em></em>规划</span>
+                </div>
+                <div class="study_guide_container_content">
+                    <div class="sousuo">
+                       <p>热门国家：<span>美国</span></p>
+                       <p>按国家搜索：</p>
+                       <select class="study_guide_select">
+                            <option value="1" class="selectCountry" disabled selected>请选择国家</option>
+                            <option value="china">中国</option>
+                            <option value="us">美国</option>
+                            <option value="uk">英国</option>
+                            <option value="fr">法国</option>
+                        </select>
+                        <span class="study_guide_select_down">∨</span>
+                    </div>
+                    <div class="study_guide_container_content_article active" id="school">
+                        <ul>
+                            <li>
+                                <h4 class="GuideArticleTitle" guidearticle="schoolArticle-2019-01-31-10-24-03">2019去加拿大留学什么商学院好</h4>
+                                <h5>针对计划出国读高中的家庭中学生的调研数据显示，学生想要出国读高中的五大动因分别是asdasdasdasdasd</h5>
+                                <span class="details">[详情]</span>
+                                <div class="artice-lable">
+                                    <span>美国</span>
+                                    <span>美国哈佛大学</span>
+                                    <span>2017-09-28</span>
+                                    <span>浏览量:655</span>
+                                    <span>分享</span>
+                                </div>
+                               
+                            </li>
+                            <li>
+                                    <h4 class="GuideArticleTitle" guidearticle="schoolArticle-2019-01-31-10-24-05">2019去加拿大留学什么商学院好</h4>
+                                    <h5>针对计划出国读高中的家庭中学生的调研数据显示，学生想要出国读高中的五大动因分别是asdasdasdasdasd</h5>
+                                    <span class="details">[详情]</span>
+                                    <div class="artice-lable">
+                                        <span>美国</span>
+                                        <span>美国哈佛大学</span>
+                                        <span>2017-09-28</span>
+                                        <span>浏览量:655</span>
+                                        <span>分享</span>
+                                    </div>
+                                </li>
+                        </ul>
+                    </div>
+                    <div class="study_guide_container_content_article" id="subject">
+                        <ul>
+                            <li>
+                                    <h4 class="GuideArticleTitle" guidearticle="subjectArticle-2019-01-31-10-24-05">2019去加拿大留学什么商学院好</h4>
+                                    <h5>针对计划出国读高中的家庭中学生的调研数据显示，学生想要出国读高中的五大动因分别是asdasdasdasdasd</h5>
+                                    <span class="details">[详情]</span>
+                                    <div class="artice-lable">
+                                        <span>美国</span>
+                                        <span>美国哈佛大学</span>
+                                        <span>2017-09-28</span>
+                                        <span>浏览量:655</span>
+                                        <span>分享</span>
+                                    </div>
+                                </li>
+                        </ul>
+                    </div>
+                    <div class="study_guide_container_content_article" id="apply">
+                        <li>
+                            <h4 class="GuideArticleTitle" guidearticle="applyArticle-2019-01-31-10-24-05">2019去加拿大留学什么商学院好</h4>
+                            <h5>针对计划出国读高中的家庭中学生的调研数据显示，学生想要出国读高中的五大动因分别是asdasdasdasdasd</h5>
+                            <span class="details">[详情]</span>
+                            <div class="artice-lable">
+                                <span>美国</span>
+                                <span>美国哈佛大学</span>
+                                <span>2017-09-28</span>
+                                <span>浏览量:655</span>
+                                <span>分享</span>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="study_guide_container_content_article" id="project">
+                        <li>
+                            <h4 class="GuideArticleTitle" guidearticle="projectArticle-2019-01-31-10-24-05">2019去加拿大留学什么商学院好</h4>
+                            <h5>针对计划出国读高中的家庭中学生的调研数据显示，学生想要出国读高中的五大动因分别是asdasdasdasdasd</h5>
+                            <span class="details">[详情]</span>
+                            <div class="artice-lable">
+                                <span>美国</span>
+                                <span>美国哈佛大学</span>
+                                <span>2017-09-28</span>
+                                <span>浏览量:655</span>
+                                <span>分享</span>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+                <div class="study_guide_container_ad"></div>
+            </div>
+        </div>
+            <div class="schoolArticle" id="schoolArticle-2019-01-31-10-24-03">
+                <div class="step">
+                    <span class="glyphicon glyphicon-map-marker"></span>
+                    <span>首页<i class="zhuanye">&gt</i><b class="liuxuezhinan">留学指南</b><i class="zhuanye">&gt</i>2019去加拿大留学什么商学院好1</span>
+                </div>
+                <div class="Article-content">
+                    <div class="Article-content-title">
+                        <h3>中国家长送娃高中去留学：为了“快乐学习”</h3>
+                        <p><span>发布时间：2019-01-31</span><span>浏览量：645</span><span>分享:</span></p>
+                    </div>
+                    <div class="Article-content-details"><p>摘要 ： 针对计划出国读高中的家庭中学生的调研数据显示，学生想要出国读高中的五大动因分别是 ：想要获得更好的教育，想要获得国外高中的学习体验，国内学习压力大承受不住，受到其他同学影响，想要进入更好的大学。</p></div>
+                    <div class="Article-content-main">
+                       这是2019去加拿大留学什么商学院好1
+                    </div>
+                </div>
+                <div class="study_guide_container_ad"></div>
+            </div>
+            <div class="schoolArticle" id="schoolArticle-2019-01-31-10-24-05">
+                <div class="step">
+                    <span class="glyphicon glyphicon-map-marker"></span>
+                    <span>首页<i class="zhuanye">&gt</i><b class="liuxuezhinan">留学指南</b><i class="zhuanye">&gt</i>2019去加拿大留学什么商学院好1</span>
+                </div>
+                <div class="Article-content">
+                    <div class="Article-content-title">
+                        <h3>中国家长送娃高中去留学：为了“快乐学习”</h3>
+                        <p><span>发布时间：2019-01-31</span><span>浏览量：645</span><span>分享:</span></p>
+                    </div>
+                    <div class="Article-content-details"><p>摘要 ： 针对计划出国读高中的家庭中学生的调研数据显示，学生想要出国读高中的五大动因分别是 ：想要获得更好的教育，想要获得国外高中的学习体验，国内学习压力大承受不住，受到其他同学影响，想要进入更好的大学。</p></div>
+                    <div class="Article-content-main">
+                       这是2019去加拿大留学什么商学院好2
+                    </div>
+                </div>
+                <div class="study_guide_container_ad"></div>
+            </div>
+            <div class="schoolArticle" id="subjectArticle-2019-01-31-10-24-05">
+                <div class="step">
+                    <span class="glyphicon glyphicon-map-marker"></span>
+                    <span>首页<i class="zhuanye">&gt</i><b class="liuxuezhinan">留学指南</b><i class="zhuanye">&gt</i>2019去加拿大留学什么商学院好1</span>
+                </div>
+                <div class="Article-content">
+                    <div class="Article-content-title">
+                        <h3>中国家长送娃高中去留学：为了“快乐学习”</h3>
+                        <p><span>发布时间：2019-01-31</span><span>浏览量：645</span><span>分享:</span></p>
+                    </div>
+                    <div class="Article-content-details"><p>摘要 ： 针对计划出国读高中的家庭中学生的调研数据显示，学生想要出国读高中的五大动因分别是 ：想要获得更好的教育，想要获得国外高中的学习体验，国内学习压力大承受不住，受到其他同学影响，想要进入更好的大学。</p></div>
+                    <div class="Article-content-main">
+                       这是2019去加拿大留学什么专业好
+                    </div>
+                </div>
+                <div class="study_guide_container_ad"></div>
+            </div>
+            <div class="schoolArticle" id="applyArticle-2019-01-31-10-24-05">
+                <div class="step">
+                    <span class="glyphicon glyphicon-map-marker"></span>
+                    <span>首页<i class="zhuanye">&gt</i><b class="liuxuezhinan">留学指南</b><i class="zhuanye">&gt</i>2019去加拿大留学什么商学院好1</span>
+                </div>
+                <div class="Article-content">
+                    <div class="Article-content-title">
+                        <h3>中国家长送娃高中去留学：为了“快乐学习”</h3>
+                        <p><span>发布时间：2019-01-31</span><span>浏览量：645</span><span>分享:</span></p>
+                    </div>
+                    <div class="Article-content-details"><p>摘要 ： 针对计划出国读高中的家庭中学生的调研数据显示，学生想要出国读高中的五大动因分别是 ：想要获得更好的教育，想要获得国外高中的学习体验，国内学习压力大承受不住，受到其他同学影响，想要进入更好的大学。</p></div>
+                    <div class="Article-content-main">
+                       这是2019去加拿大申请什么专业好
+                    </div>
+                </div>
+                <div class="study_guide_container_ad"></div>
+            </div>
+            <div class="schoolArticle" id="projectArticle-2019-01-31-10-24-05">
+                <div class="step">
+                    <span class="glyphicon glyphicon-map-marker"></span>
+                    <span>首页<i class="zhuanye">&gt</i><b class="liuxuezhinan">留学指南</b><i class="zhuanye">&gt</i>2019去加拿大留学什么商学院好1</span>
+                </div>
+                <div class="Article-content">
+                    <div class="Article-content-title">
+                        <h3>中国家长送娃高中去留学：为了“快乐学习”</h3>
+                        <p><span>发布时间：2019-01-31</span><span>浏览量：645</span><span>分享:</span></p>
+                    </div>
+                    <div class="Article-content-details"><p>摘要 ： 针对计划出国读高中的家庭中学生的调研数据显示，学生想要出国读高中的五大动因分别是 ：想要获得更好的教育，想要获得国外高中的学习体验，国内学习压力大承受不住，受到其他同学影响，想要进入更好的大学。</p></div>
+                    <div class="Article-content-main">
+                     规划2019去加拿大留学什么专业好
+                    </div>
+                </div>
+                <div class="study_guide_container_ad"></div>
+            </div>
+        </div>
+        <div class="bottom_container" id="study_information">
+            <div class="step">
+                    <span class="glyphicon glyphicon-map-marker"></span>
+                    <span>首页<i class="zhuanye">&gt</i>留学资讯</span>
+                </div>
+                <div class="study_information_container">
+                    <div class="study_information_container_title">
+                        <span class="title">留学资讯</span>
+                        
+                    </div>
+                    <div class="study_information_container_content">
+                            <div class="sousuo">
+                                    这是搜索
+                                </div>
+                    </div>
+                    <div class="study_information_container_ad"></div>
+                </div>
+        </div>
+        <div class="bottom_container" id="free_assess">
+            这是免费评估
+        </div>
+        <div class="bottom_container" id="study_answers">
+            这是留学问答
+        </div>
+        <div class="bottom_container" id="service_process">
+            这是服务进程
+        </div>
+        <div class="bottom_container" id="about_our">
+            这是关于我们
+        </div>
+        <div class="bottom_container" id="coo_others">
+            这是诚招合作
+        </div>
+
+    </div>
+    <div id="bottom-container">
+        这是虾米~~~~~~
+    </div>
+</body>
+<script src="./js/index.js"></script>
+<script src="./static/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+
+</html>

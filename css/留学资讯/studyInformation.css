@@ -1,0 +1,72 @@
+#study_information {
+    height: 100%;
+    width: 63%;
+    margin: 0px auto;
+    position: relative;
+}
+.step .glyphicon {
+    line-height: 30px;
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+.step span {
+    color: #d33333;
+}
+
+#container .step {
+    background-color: rgb(244, 228, 228);
+    height: 30px;
+    margin: 20px auto;
+
+}
+
+.study_information_container {
+    width: 71.5%;
+    height: 1300px;
+    background-color: white;
+
+}
+.study_information_container_title{
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid rgb(244, 228, 228);
+}
+.study_information_container_title span{
+    display: inline-block;
+
+}
+.study_information_container_title .title{
+    width: 120px;
+    height: 60px;
+    margin: 0px 20px;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 60px;
+    border-bottom: solid 2px #d33333;
+}
+
+
+.study_information_container_content{
+    padding-top: 1px;
+    margin-left: 20px; 
+    width: 640px;
+    height: 1240px;
+   
+}
+.study_information_container_ad{
+    display: inline-block;
+    width: 27%;
+    height: 500px;
+    background-color: blue;
+    position: absolute;
+    top: 50px;
+    right: 0px;
+}
+.study_information_container_content .sousuo{
+    margin: 20px 0px;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(245,245,245);
+}

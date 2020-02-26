@@ -1,0 +1,312 @@
+h1,h2,h3,h4,h5,h6{
+    display: inline-block;
+    margin: 0px;
+}
+#study_guide {
+    height: 100%;
+    width: 63%;
+    margin: 0px auto;
+    position: relative;
+}
+
+.zhuanye {
+
+    margin: 0px 10px;
+}
+
+.step .glyphicon {
+    line-height: 30px;
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+.step span {
+    color: #d33333;
+}
+
+#container .step {
+    background-color: rgb(244, 228, 228);
+    height: 30px;
+    margin: 20px auto;
+
+}
+
+.study_guide_container {
+    width: 71.5%;
+    height: 1300px;
+    background-color: white;
+    /* overflow: scroll; */
+}
+/* .study_guide_container::-webkit-scrollbar{
+    display: none;
+} */
+.study_guide_container_title{
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid rgb(244, 228, 228);
+}
+.study_guide_container_title span{
+    display: inline-block;
+
+}
+.study_guide_container_title .title{
+    width: 120px;
+    height: 60px;
+    margin: 0px 20px;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 60px;
+    border-bottom: solid 2px #d33333;
+}
+
+.study_guide_direction {
+
+    color: white;
+    width: 80px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: rgb(229, 133, 134);
+    margin-left: 20px;
+
+    text-align: center;
+    line-height: 25px;
+    position: relative;
+    cursor: pointer;
+}
+.study_guide_direction.active {
+    color: white;
+    width: 80px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: #d33333;
+    text-align: center;
+    line-height: 25px;
+    position: relative;
+    cursor: pointer;
+}
+/*这个很有用*/
+.study_guide_direction.active em {
+    position: absolute;
+    bottom: -15px;
+    left: 33px;
+    display: block;
+    border-width: 8px;
+    border-color: #d33333 transparent transparent;
+    font-size: 0px;
+    line-height: 0px;
+    border-style: solid dashed dashed;
+}
+.study_guide_container_content{
+    padding-top: 1px;
+    margin-left: 20px; 
+    width: 640px;
+    height: 1240px;
+   
+}
+.study_guide_container_ad{
+    display: inline-block;
+    width: 27%;
+    height: 500px;
+   background-color: blue;
+    position: absolute;
+    top: 50px;
+    right: 0px;
+ 
+}
+.study_guide_container_content .sousuo{
+  margin: 20px 0px;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(245,245,245);
+    position: relative;
+}
+.study_guide_container_content_article{
+    display: none;
+}
+.study_guide_container_content_article.active{
+    display: block;
+}
+.sousuo{
+    padding-top: 1px;
+}
+.sousuo p:nth-child(1){
+    display: inline-block;
+    width: 55%;
+    height: 20px;
+    border-right: 1px solid rgb(252,196,197);
+    margin-top: 15px;
+    margin-left: 18px;
+    font-weight: 500;
+}
+.sousuo p:nth-child(2){
+    display: inline-block;
+    width: 14%;
+    height: 20px;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-weight: 500;
+}
+.study_guide_select{
+    width:150px;
+    height:auto;
+    padding: 4px 10px;
+    border: 1px solid rgb(189, 189, 189);
+    border-radius: 5px;
+    outline: none;
+    color: rgb(110, 110, 110);
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+.study_guide_select_down{
+    display: inline-block;
+    position: absolute;
+    top:12px;
+    right:20px;
+    color: rgb(150, 150, 150);
+    font-size: 20px;
+    transform: scale(2,1);
+    cursor: pointer;
+}
+.study_guide_container_content_article li{
+    list-style: none;
+    width: 100%;
+    height: 150px;
+    border-bottom: 1px solid rgb(244, 228, 228);
+    position: relative;
+}
+.study_guide_container_content_article li h4{
+    font-weight: 600;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.study_guide_container_content_article li h5{
+   width: 580px; 
+    height: 16px;
+    margin: 15px 0px;
+    white-space: nowrap; /*超出部分不换行*/
+     overflow: hidden; 
+   text-overflow: ellipsis;
+   color:#999999;
+   pointer-events: none;
+}
+.study_guide_container_content_article li h5::after{
+    margin-left: 10px;
+    content: "[收起]";
+    width: 40px;
+    height: 16px;
+    color: #d33333;
+    cursor: pointer;
+    pointer-events: auto;
+} 
+.study_guide_container_content_article li .details{
+    position: relative;
+    top: -18px;
+    cursor: pointer;
+    color: #d33333;
+    cursor: pointer;
+}
+.artice-lable{
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    bottom:20px;
+    left: 0px;
+    
+}
+.artice-lable span
+{
+    width: auto;
+    height:22px;
+    display: inline-block;
+    padding: 1px 10px;
+    border-radius: 3px;
+}
+.artice-lable span:nth-child(1),.artice-lable span:nth-child(2){
+    border: 1px solid #d33333;
+    color: #d33333;
+}
+.artice-lable span:nth-child(5){
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 12px;
+    cursor: pointer;
+    
+}
+.artice-lable span:nth-child(5)::before{
+   content: '';
+   background: url('./分享.png');
+   background-size: 15px;
+   display: inline-block;
+   width: 15px;
+   height: 15px;
+   position: relative;
+   top: 2px;
+   left: 0px;
+}
+.schoolArticle{
+    display: none;
+}
+.schoolArticle.active{
+    display: block;
+}
+.liuxuezhinan{
+    cursor: pointer;
+}
+.Article-content{
+    width: 71.5%;
+    height: 1300px;
+    background-color: white;
+}
+.Article-content-title{
+    margin-left: 20px;
+   width:93%;
+    height: 90px;
+    border-bottom: 1px solid #cccccc;
+}
+.Article-content-details{
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 93%;
+    height: 60px;
+    background-color: rgb(253,244,245);
+    padding: 10px;
+   
+}
+.Article-content-details p{
+    font-size: 12px;
+    white-space: pre-wrap;
+    color: #999999;
+}
+.Article-content-title h3{
+    margin: 10px 0px;
+    font-weight: 600;
+}
+.Article-content-title p{
+    color: #999999;
+    font-size: 12px;
+    position: relative;
+}
+.Article-content-title p span:nth-child(2){
+    margin-left: 15px;
+}
+.Article-content-title p span:nth-child(3){
+    width: 150px;
+    height: 25px;
+    position: absolute;
+    top: -8spx;
+    right: 0px;
+    line-height: 25px;
+}
+.Article-content-main{
+
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 93%;
+    height: 1000px;
+    overflow: scroll;
+}
+.Article-content-main::-webkit-scrollbar{
+    display: none;
+}

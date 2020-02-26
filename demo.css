@@ -1,0 +1,26 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    }
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.demo-container{
+    width: 165px;
+    height: auto;
+    background-color: red;
+    margin:0px auto;
+}
+
+.demo-container h1{
+    display: flex;
+    justify-content: space-around;
+}
+.demo-container p
+{
+    font-size: 12px;
+    display: flex;
+    justify-content: space-around;
+    letter-spacing: 6px;
+}
